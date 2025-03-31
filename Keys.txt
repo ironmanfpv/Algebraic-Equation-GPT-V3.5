@@ -1,0 +1,2 @@
+OPENAI KEY : "YOur OPENAI API Key"
+Cloud Vision API Key : "Your Cloud Vision API key"
