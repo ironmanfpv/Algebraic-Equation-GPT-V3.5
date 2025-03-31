@@ -18,7 +18,7 @@ Speech to Text capabilities is added for an additional option of query input.
 
 - To run a WEB HOSTED version of Algebraic Equation GPT.
 
-  Access https://ironmanfpv.github.io/Algebraic-Equation-GPT V3.5/ in browser.
+  Access https://ironmanfpv.github.io/Algebraic-Equation-GPT-V3.5/ in browser.
   Have your OPEN AI API key and your Cloud Vision API key (optional) ready. Section C and F is applies. The rest of the sections may be skipped.
 
 - To run a LOCAL HOSTED version of Algebraic Equation GPT3.5 and have the Image Text Extraction Capability, read all sections. 
