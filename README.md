@@ -8,9 +8,9 @@ The extracted equation is fed to an LLM which then analyses and solves it.
 A solution, together with its comprehensive explanation is output to the user.
 This is the UPGRADED BETA version of previous version of Algebraic Equation GPT.
 
-<img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT V3.5/blob/main/img/img 0.jpg">
-<img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT V3.5/blob/main/img/img 1.jpg">
-<img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT V3.5/blob/main/img/img 2.jpg">
+<img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%200.jpg">
+<img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%201.jpg">
+<img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%202.jpg">
 
 # SETUP STEPS: #
 Algebraic Equation GPT V3.5 works independent of Text Extraction Capability.
