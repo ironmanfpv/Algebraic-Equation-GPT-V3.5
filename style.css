@@ -243,7 +243,7 @@ button {
     tap-highlight-color: transparent;
 }
 
-/* Safari Audio Context Warning */
+/* Safari Audio Context Alert */
 @supports (-webkit-touch-callout: none) {
     #extractionStatus::before {
         content: "Note: Safari requires microphone permission";

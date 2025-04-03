@@ -45,8 +45,9 @@ async function solveEquation(equation, userName) {
         const data = await response.json();
         let solution = data.choices[0]?.message?.content.trim();
 
-        // Post-process LaTeX formatting
-        solution = solution
+        // Post-process LaTeX formatting to ensure proper display
+        // An important Update from Algebraic-Equation-GPT to V3.5 (V2 fixed formatting, V3 incorprated audio, V3.5 cross device compatibility)
+            solution = solution
             .replace(/\\\(/g, '\\( ')
             .replace(/\\\)/g, ' \\)')
             .replace(/\\\[/g, '\\[')

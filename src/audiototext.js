@@ -33,7 +33,6 @@ async function convertForWhisper(blob) {
     source.buffer = audioData;
     source.connect(offlineCtx.destination);
     source.start();
-    
     const renderedBuffer = await offlineCtx.startRendering();
     return encodeWAV(renderedBuffer.getChannelData(0));
 }
@@ -136,9 +135,9 @@ async function transcribeAudio(blob) {
         showStatus('Processing...', false);
 
         const formData = new FormData();
-        formData.append('file', blob, 'audio.wav');
+        formData.append('file', blob, 'audio.wav');   // circumventing the MIME type issue; ensuring platform compatibility.
         formData.append('model', 'whisper-1');
-        formData.append('language', 'en'); // Force English transcription
+        formData.append('language', 'en'); // Force English transcription ; an important step to reduce transcription errors.
 
         const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
             method: 'POST',
