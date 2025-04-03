@@ -2,48 +2,40 @@ let mediaRecorder;
 let audioChunks = [];
 let recording = false;
 
-document.getElementById('sayEquationButton').addEventListener('mousedown', async function(e) {
+document.getElementById('sayEquationButton').addEventListener('click', async function(e) {
     e.preventDefault();
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        mediaRecorder = new MediaRecorder(stream);
-        recording = true;
-        
-        mediaRecorder.ondataavailable = function(event) {
-            audioChunks.push(event.data);
-        };
-
-        mediaRecorder.onstop = async function() {
-            const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-            await transcribeAudio(audioBlob);
-            audioChunks = [];
-            stream.getTracks().forEach(track => track.stop());
-        };
-
-        mediaRecorder.start();
-        this.classList.add('recording');
-    } catch (err) {
-        alert('Error accessing microphone: ' + err.message);
-    }
-});
-
-document.getElementById('sayEquationButton').addEventListener('mouseup', function(e) {
-    e.preventDefault();
-    if (mediaRecorder && recording) {
+    if (recording) {
+        // Stop recording
         mediaRecorder.stop();
         recording = false;
         this.classList.remove('recording');
+    } else {
+        // Start recording
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            recording = true;
+            
+            mediaRecorder.ondataavailable = function(event) {
+                audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = async function() {
+                const mimeType = mediaRecorder.mimeType;
+                const audioBlob = new Blob(audioChunks, { type: mimeType });
+                await transcribeAudio(audioBlob);
+                audioChunks = [];
+                stream.getTracks().forEach(track => track.stop());
+            };
+
+            mediaRecorder.start();
+            this.classList.add('recording');
+        } catch (err) {
+            alert('Error accessing microphone: ' + err.message);
+            recording = false;
+            this.classList.remove('recording');
+        }
     }
-});
-
-// For touch devices
-document.getElementById('sayEquationButton').addEventListener('touchstart', function(e) {
-    this.dispatchEvent(new MouseEvent('mousedown', { relatedTarget: e.touches[0] }));
-});
-
-document.getElementById('sayEquationButton').addEventListener('touchend', function(e) {
-    this.dispatchEvent(new MouseEvent('mouseup', { relatedTarget: e.changedTouches[0] }));
-    e.preventDefault();
 });
 
 async function transcribeAudio(audioBlob) {
@@ -56,7 +48,11 @@ async function transcribeAudio(audioBlob) {
     }
 
     const formData = new FormData();
-    formData.append('file', audioBlob, 'recording.webm');
+    
+    // Generate appropriate file extension from MIME type
+    const mimeType = audioBlob.type;
+    const extension = mimeType.split('/')[1].split(';')[0];
+    formData.append('file', audioBlob, `recording.${extension}`);
     formData.append('model', 'whisper-1');
 
     try {
@@ -80,7 +76,6 @@ async function transcribeAudio(audioBlob) {
         if (data.text) {
             equationField.value = data.text;
             statusMessage.textContent = "Transcription successful!";
-
             setTimeout(() => statusMessage.textContent = "", 3000);
         } else {
             equationField.value = '';
