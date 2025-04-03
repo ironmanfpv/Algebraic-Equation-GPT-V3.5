@@ -236,3 +236,20 @@ button {
         background-color: #808080;
     }
 }
+
+/* iOS Tap Highlight Fix */
+button {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+/* Safari Audio Context Warning */
+@supports (-webkit-touch-callout: none) {
+    #extractionStatus::before {
+        content: "Note: Safari requires microphone permission";
+        display: block;
+        color: #888;
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+}
