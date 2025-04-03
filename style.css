@@ -219,3 +219,20 @@ button:hover {
         font-size: 0.9em;
     }
 }
+
+/* iOS specific tweaks styles */
+button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+#sayEquationButton {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media (hover: none) {
+    button:hover {
+        background-color: #808080;
+    }
+}
