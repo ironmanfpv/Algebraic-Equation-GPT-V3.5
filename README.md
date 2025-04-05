@@ -8,9 +8,9 @@ The extracted equation is fed to an LLM which then analyses and solves it.
 A solution, together with its comprehensive explanation is output to the user.
 This is the UPGRADED BETA version of previous version of Algebraic Equation GPT.
 
-In version 1, users could input equation via camera, photo file, text input via keyboard or (iOS) stylus. 
-In this version, Speech to Text capabilities is added as the 5th option of query input. 
-Algebra Equation GPT V3.5 understand equations said in natural English language.
+In version 1, users could input equation via camera, photo file, text input via keyboard or (iOS) stylus.<br> 
+In this version, Speech to Text capabilities is added as the 5th option of query input.<br> 
+Algebra Equation GPT V3.5 understand equations said in natural English language.<br>
 Say the equation as you would read it out and Algebraic Equation GPT V3.5 will transcribe. 
 
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%200.jpg">
@@ -86,7 +86,7 @@ Text, Image to Text and Speech to text scripts were incrementally integrated wit
 1.  Key in your name.
 2.  Key in your OPENAI API key and click confirmed. (Ensure both name and API keys are entered.)
 3.  Key in your Cloud Vision API key if you would like to use text recognition capabilities (This is optional)
-4.  In the Extract Equation Window, type in the Equation you would like Algebraic Equation GPT V3.5 to solve, analysed and explained.
+4.  In the Extract Equation Window, input Equation for Algebraic Equation GPT V3.5 to solve, analysed and explained.
 5.  Alternatively, Click the "Say Equation" button to activate mic and record audio equation input. 
 6.  Click the button again to end audio recording and have it transcribed.
 7.  In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
