@@ -8,7 +8,7 @@ The extracted equation is fed to an LLM which then analyses and solves it.
 A solution, together with its comprehensive explanation is output to the user.
 This is the UPGRADED BETA version of previous version of Algebraic Equation GPT.
 
-In version 1, users could input equation via camera, photo file, keyboard text or (iOS) stylus. 
+In version 1, users could input equation via camera, photo file, text input via keyboard or (iOS) stylus. 
 In this version, Speech to Text capabilities is added as the 5th option of query input. 
 Algebra Equation GPT V3.5 understand equations said in natural English language.
 Say the equation as you would read it out and Algebraic Equation GPT V3.5 will transcribe. 
@@ -19,7 +19,7 @@ Say the equation as you would read it out and Algebraic Equation GPT V3.5 will t
 
 # SETUP STEPS: #
 
-Algebraic Equation GPT V3.5 was developed modularly and independently from ground up.
+Algebraic Equation GPT V3.5 was developed modularly and independently from ground up.<br>
 Text, Image to Text and Speech to text scripts were incrementally integrated with the GPT.
 
 - To run a WEB HOSTED version of Algebraic Equation GPT.
