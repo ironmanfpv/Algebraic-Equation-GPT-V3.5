@@ -1,14 +1,14 @@
 # Algebraic Equation GPT V3.5
 
 This repo experiments with Image text recognition API,Speech to Text API and LLMs.
-A photo or an image containing Mathematics Equation(s) is fed to the app.
+A photo or an image containing Mathematics equation(s) is fed to the app.
 The web application implements Cloud Vision API to extract text from the source.
 Equation(s) to be solved can also be keyed in or written out, to edit the extracted text.
 The extracted equation is fed to an LLM which then analyses and solves it.
 A solution, together with its comprehensive explanation is output to the user.
 This is the UPGRADED BETA version of previous version of Algebraic Equation GPT.
 
-In version 1, users could input equation via camera, photo file, keyboard text or (iOS)stylus. 
+In version 1, users could input equation via camera, photo file, keyboard text or (iOS) stylus. 
 In this version, Speech to Text capabilities is added as the 5th option of query input. 
 Algebra Equation GPT V3.5 understand equations said in natural English language.
 Say the equation as you would read it out and Algebraic Equation GPT V3.5 will transcribe. 
@@ -19,7 +19,7 @@ Say the equation as you would read it out and Algebraic Equation GPT V3.5 will t
 
 # SETUP STEPS: #
 
-Algebraic Equation GPT V3.5 was developed modularly.
+Algebraic Equation GPT V3.5 was developed modularly and independently from ground up.
 Text, Image to Text and Speech to text scripts were incrementally integrated with the GPT.
 
 - To run a WEB HOSTED version of Algebraic Equation GPT.
