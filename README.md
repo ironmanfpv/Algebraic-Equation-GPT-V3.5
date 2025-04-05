@@ -20,7 +20,7 @@ Say the equation as you would read it out and Algebraic Equation GPT V3.5 will t
 # SETUP STEPS: #
 
 Algebraic Equation GPT V3.5 was developed modularly and independently from ground up.<br>
-Text, Image to Text and Speech to text scripts were incrementally integrated with the GPT.
+Text, Image to Text and Speech to text capabilities were incrementally integrated with the GPT.
 
 - To run a WEB HOSTED version of Algebraic Equation GPT.
 
