@@ -11,7 +11,7 @@ This is the UPGRADED BETA version of previous version of Algebraic Equation GPT.
 In version 1, users could input equation via camera, photo file, text input via keyboard or (iOS) stylus.<br> 
 In this version, Speech to Text capabilities is added as the 5th option of query input.<br> 
 Algebra Equation GPT V3.5 understand equations said in natural English language.<br>
-Say the equation as you would read it out and Algebraic Equation GPT V3.5 will transcribe. 
+Say the equation as you would read it out and Algebraic Equation GPT V3.5 will transcribe.<br> 
 
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%200.jpg">
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%201.jpg">
