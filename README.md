@@ -1,25 +1,31 @@
 # Algebraic Equation GPT V3.5
 
 This repo experiments with Image text recognition API,Speech to Text API and LLMs.
-A Photo or an image containing Mathematics Equation(s) is fed to the app.
-The web application implements Cloud Vision API to study the source and extract the equation(s).
-Equation(s) to be solved can also be spoken to Algebraic Equation GPT V3.5 and/or edited.
+A photo or an image containing Mathematics Equation(s) is fed to the app.
+The web application implements Cloud Vision API to extract text from the source.
+Equation(s) to be solved can also be keyed in or written out, to edit the extracted text.
 The extracted equation is fed to an LLM which then analyses and solves it.
 A solution, together with its comprehensive explanation is output to the user.
 This is the UPGRADED BETA version of previous version of Algebraic Equation GPT.
+
+In version 1, users could input equation via camera, photo file, keyboard text or (iOS)stylus. 
+In this version, Speech to Text capabilities is added as the 5th option of query input. 
+Algebra Equation GPT V3.5 understand equations said in natural English language.
+Say the equation as you would read it out and Algebraic Equation GPT V3.5 will transcribe. 
 
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%200.jpg">
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%201.jpg">
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT-V3.5/blob/main/img/img%202.jpg">
 
 # SETUP STEPS: #
-Algebraic Equation GPT V3.5 works independent of Text Extraction Capability.
-Speech to Text capabilities is added for an additional option of query input.
+
+Algebraic Equation GPT V3.5 was developed modularly.
+Text, Image to Text and Speech to text scripts were incrementally integrated with the GPT.
 
 - To run a WEB HOSTED version of Algebraic Equation GPT.
 
   Access https://ironmanfpv.github.io/Algebraic-Equation-GPT-V3.5/ in browser.
-  Have your OPEN AI API key and your Cloud Vision API key (optional) ready. Section C and F is applies. The rest of the sections may be skipped.
+  Have your OPEN AI API key and your Cloud Vision API key (optional) ready. Section B,C and F applies. The rest of the sections may be skipped.
 
 - To run a LOCAL HOSTED version of Algebraic Equation GPT3.5 and have the Image Text Extraction Capability, read all sections. 
 
@@ -44,7 +50,7 @@ Speech to Text capabilities is added for an additional option of query input.
 
 ## C. Generate OPENAI API keys ##
 
-1.  Access OPENAI>API and Sign up or Log in.
+1.  Access OPENAI>API via Sign up or Log in.
 2.  Click settings (Nut icon on top right, beside profile).
 3.  Left Column, under organisation >API Keys> + Create New Secret Key.
 4.  Select Key owned by you> Type in Name>Select Default project > Click Create Secret Key.
@@ -52,9 +58,8 @@ Speech to Text capabilities is added for an additional option of query input.
 
 ## D. Download Code IDE and installations  ##
 
-1.  Install VS code and all its relevant extensions. Extensions : Python, node
-2.  In VS Code, run a copy of this project from GitHub repository.
-3.  To enable text detection capabilities, key in your Cloud Vision API keys.
+1.  Install VS code and all its relevant extensions. Extensions : Python, node.
+2.  In VS Code, run a copy of this project from the GitHub repository.
 
 ## E. Procedure to running a local version of Algebriac Equation GPT ##
 
@@ -62,29 +67,31 @@ Speech to Text capabilities is added for an additional option of query input.
 2.  In VS code project tab, click on index.html, close all other terminals and nodes.
 2.  Call up a new terminal.
 3.  In your working directory prompt, run node.
-4.  In your working directory prompt, install the http-server package by typing : npm install http-server
+4.  In your working directory prompt, install the http-server package : npm install http-server
 5.  In your working directory prompt, start a web server: npx http-server -p 8000
 6.  In your browser, navigate to http://localhost:8000, or click on one of the 2 generated URL, app will load.
 7.  Key in your name.
 8.  Key in your OPENAI API key and click confirmed. (Ensure both name and API keys are entered.)
 9.  Key in your Cloud Vision API key if you would like to use text recognition capabilities (This is optional)
-10.  In the Upload window, click "Choose file" to select a picture (JPEG or PNG) containing a Math equation.
-11. In the Extract Equation Window, Click "Read" to extract equation, "Clear" to clear the window. 
-12. In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
-13. If solution is cryptic or unclear, repeating Step 11 will regenerate another output.
-14. Click "Exit" to end the app.
-15. AR device functions are not developed at the time of commit.
+10. In the Upload window, click "Choose file" for camera or select a picture (JPEG or PNG) with a Math equation.
+11. In the Extract Equation Window, Click "Read" to extract equation, "Clear" to clear the window.
+12. In the Extract Equation Window, Click "Say Equation" to read equation out to the GPT.
+13. In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
+14. If solution is cryptic or unclear, repeating Step 13 will regenerate another output.
+15. Click "Exit" to end the app, resetting app to all defaults, clearing all memory.
+16. AR device functions are not developed at the time of commit.
 
 ## F. Procedure to use a hosted version of Algebriac Equation GPT ##
 
 1.  Key in your name.
 2.  Key in your OPENAI API key and click confirmed. (Ensure both name and API keys are entered.)
 3.  Key in your Cloud Vision API key if you would like to use text recognition capabilities (This is optional)
-4.  In the Extract Equation Window, type in the Equation you would like Algebraic Equation GPT to be solved, analysed and explained.
-5.  Alternatively, Click and hold "Say Equation" to activate mic for audio equation input. Release the button to transcribe audio.
-6.  In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
-7.  If solution is cryptic or unclear, repeating Step 11 will regenerate another output.
-8.  Click "Exit" to end the app, logging out, resetting application to default.
+4.  In the Extract Equation Window, type in the Equation you would like Algebraic Equation GPT V3.5 to solve, analysed and explained.
+5.  Alternatively, Click the "Say Equation" button to activate mic and record audio equation input. 
+6.  Click the button again to end audio recording and have it transcribed.
+7.  In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
+8.  If solution is cryptic or unclear, repeating Step 7 will regenerate another output.
+9.  Click "Exit" to end the app, logging out, resetting application to default.
 
 ## G. Inspiration ##
 
